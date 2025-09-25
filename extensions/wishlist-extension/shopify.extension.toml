@@ -1,0 +1,40 @@
+name = "wishlist-extension"
+handle = "wishlist-extension"
+type = "theme"
+
+[settings]
+[[settings]]
+type = "header"
+content = "Wishlist Settings"
+
+[[settings]]
+type = "color"
+id = "heart_color"
+label = "Heart Icon Color"
+default = "#e91e63"
+
+[[settings]]
+type = "color"
+id = "heart_color_active"
+label = "Active Heart Icon Color" 
+default = "#c2185b"
+
+[[settings]]
+type = "number"
+id = "dropdown_items"
+label = "Items in dropdown"
+default = 5
+min = 1
+max = 10
+
+[[settings]]
+type = "text"
+id = "wishlist_page_url"
+label = "Wishlist Page URL"
+default = "/pages/wishlist"
+
+[[settings]]
+type = "checkbox"
+id = "enable_guest_wishlist"
+label = "Enable guest wishlist (cookies)"
+default = true

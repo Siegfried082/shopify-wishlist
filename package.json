@@ -1,0 +1,22 @@
+{
+  "name": "shopify-wishlist-app",
+  "version": "1.0.0",
+  "description": "A Shopify app for wishlist functionality",
+  "main": "index.js",
+  "scripts": {
+    "dev": "shopify app dev",
+    "build": "shopify app build",
+    "deploy": "shopify app deploy",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": ["shopify", "wishlist", "app"],
+  "author": "Shopify Developer",
+  "license": "MIT",
+  "dependencies": {
+    "@shopify/shopify-api": "^9.0.0",
+    "@shopify/app-bridge": "^3.7.0"
+  },
+  "devDependencies": {
+    "@shopify/cli": "^3.50.0"
+  }
+}

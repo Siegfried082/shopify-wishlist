@@ -1,0 +1,20 @@
+{
+  "general": {
+    "wishlist": {
+      "add_to_wishlist": "Add to wishlist",
+      "remove_from_wishlist": "Remove from wishlist",
+      "added_to_wishlist": "Added to wishlist",
+      "removed_from_wishlist": "Removed from wishlist",
+      "view_all": "View All",
+      "my_wishlist": "My Wishlist",
+      "empty_wishlist": "Your wishlist is empty",
+      "continue_shopping": "Continue Shopping",
+      "start_shopping": "Start Shopping",
+      "clear_all": "Clear All",
+      "add_to_cart": "Add to Cart",
+      "view_product": "View Product",
+      "items": "items",
+      "item": "item"
+    }
+  }
+}

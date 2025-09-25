@@ -1,0 +1,20 @@
+{
+  "general": {
+    "wishlist": {
+      "add_to_wishlist": "Ajouter à la liste de souhaits",
+      "remove_from_wishlist": "Retirer de la liste de souhaits",
+      "added_to_wishlist": "Ajouté à la liste de souhaits",
+      "removed_from_wishlist": "Retiré de la liste de souhaits",
+      "view_all": "Voir tout",
+      "my_wishlist": "Ma liste de souhaits",
+      "empty_wishlist": "Votre liste de souhaits est vide",
+      "continue_shopping": "Continuer les achats",
+      "start_shopping": "Commencer les achats",
+      "clear_all": "Tout effacer",
+      "add_to_cart": "Ajouter au panier",
+      "view_product": "Voir le produit",
+      "items": "articles",
+      "item": "article"
+    }
+  }
+}

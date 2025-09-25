@@ -1,0 +1,89 @@
+{% comment %}
+  Wishlist Button Block - Heart toggle for products
+{% endcomment %}
+
+{% assign product_id = product.id | default: block.settings.product_id %}
+{% assign heart_color = block.settings.heart_color | default: settings.heart_color | default: '#e91e63' %}
+{% assign heart_color_active = block.settings.heart_color_active | default: settings.heart_color_active | default: '#c2185b' %}
+
+<div class="wishlist-button-wrapper" data-product-id="{{ product_id }}">
+  <button class="wishlist-button" 
+          data-product-id="{{ product_id }}"
+          data-product-title="{{ product.title | escape }}"
+          data-product-image="{{ product.featured_image | img_url: '100x100' }}"
+          data-product-url="{{ product.url }}"
+          data-product-price="{{ product.price | money_without_currency }}"
+          aria-label="Add to wishlist"
+          title="Add to wishlist">
+    <svg class="wishlist-heart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path class="heart-outline" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="{{ heart_color }}" stroke-width="1.5"/>
+      <path class="heart-filled" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="{{ heart_color_active }}" style="opacity: 0;"/>
+    </svg>
+  </button>
+</div>
+
+<style>
+  .wishlist-button-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .wishlist-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .wishlist-button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .wishlist-heart {
+    transition: all 0.3s ease;
+  }
+  
+  .wishlist-button.active .heart-outline {
+    opacity: 0;
+  }
+  
+  .wishlist-button.active .heart-filled {
+    opacity: 1 !important;
+  }
+  
+  .wishlist-button.active .wishlist-heart {
+    transform: scale(1.2);
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Wishlist Button",
+  "target": "section",
+  "available_if": "{{ app.wishlist_extension.enabled }}",
+  "settings": [
+    {
+      "type": "text",
+      "id": "product_id",
+      "label": "Product ID (optional - uses current product if empty)"
+    },
+    {
+      "type": "color",
+      "id": "heart_color",
+      "label": "Heart Icon Color",
+      "default": "#e91e63"
+    },
+    {
+      "type": "color", 
+      "id": "heart_color_active",
+      "label": "Active Heart Icon Color",
+      "default": "#c2185b"
+    }
+  ]
+}
+{% endschema %}
