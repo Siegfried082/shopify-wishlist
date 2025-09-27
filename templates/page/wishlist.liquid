@@ -1,0 +1,66 @@
+{% comment %}
+  Template for the wishlist page
+  To use this template:
+  1. In Shopify admin, go to Pages
+  2. Create a new page with handle "wishlist" 
+  3. Set the template to "page.wishlist"
+{% endcomment %}
+
+<div class="page-width">
+  <header class="page-header">
+    <h1 class="page-title">
+      {{ page.title }}
+    </h1>
+  </header>
+
+  <div class="page-content">
+    {{ page.content }}
+    
+    <!-- Include the wishlist page block -->
+    {% render 'wishlist-page' %}
+  </div>
+</div>
+
+<!-- Include wishlist JavaScript -->
+<script src="{{ 'wishlist.js' | asset_url }}" defer></script>
+
+<!-- Include wishlist styles -->
+<link rel="stylesheet" href="{{ 'wishlist.css' | asset_url }}">
+
+<style>
+  .page-width {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .page-header {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .page-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+  }
+  
+  .page-content {
+    margin-bottom: 60px;
+  }
+  
+  @media (max-width: 768px) {
+    .page-width {
+      padding: 0 15px;
+    }
+    
+    .page-title {
+      font-size: 2rem;
+    }
+    
+    .page-header {
+      margin: 20px 0;
+    }
+  }
+</style>

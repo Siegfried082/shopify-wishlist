@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist Test Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test-product { border: 1px solid #ddd; padding: 20px; margin: 20px 0; border-radius: 8px; }
+        .test-header { background: #f5f5f5; padding: 10px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="test-header">
+        <h1>Shopify Wishlist Test Page</h1>
+        <!-- Wishlist Dropdown Test -->
+        <div class="wishlist-dropdown-wrapper">
+            <button class="wishlist-dropdown-trigger" aria-label="View wishlist" title="View wishlist">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/>
+                </svg>
+                <span class="wishlist-count">0</span>
+            </button>
+            
+            <div class="wishlist-dropdown-content">
+                <div class="wishlist-dropdown-header">
+                    <h3>My Wishlist</h3>
+                    <span class="wishlist-total-count">0 items</span>
+                </div>
+                
+                <div class="wishlist-dropdown-items">
+                    <div class="wishlist-empty-state" style="display: none;">
+                        <p>Your wishlist is empty</p>
+                        <a href="/" class="continue-shopping-btn">Continue Shopping</a>
+                    </div>
+                </div>
+                
+                <div class="wishlist-dropdown-footer">
+                    <a href="/pages/wishlist" class="view-all-wishlist-btn">View All</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Test Products -->
+    <div class="test-product">
+        <h3>Test Product 1 - Wireless Headphones</h3>
+        <p>Price: $99.99</p>
+        <div class="wishlist-button-wrapper" data-product-id="test-product-1">
+            <button class="wishlist-button" 
+                    data-product-id="test-product-1"
+                    data-product-title="Wireless Headphones"
+                    data-product-image="https://via.placeholder.com/100x100"
+                    data-product-url="/products/wireless-headphones"
+                    data-product-price="99.99"
+                    aria-label="Add to wishlist"
+                    title="Add to wishlist">
+                <svg class="wishlist-heart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="heart-outline" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="#e91e63" stroke-width="1.5"/>
+                    <path class="heart-filled" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="#c2185b" style="opacity: 0;"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <div class="test-product">
+        <h3>Test Product 2 - Smartphone Case</h3>
+        <p>Price: $29.99</p>
+        <div class="wishlist-button-wrapper" data-product-id="test-product-2">
+            <button class="wishlist-button" 
+                    data-product-id="test-product-2"
+                    data-product-title="Smartphone Case"
+                    data-product-image="https://via.placeholder.com/100x100"
+                    data-product-url="/products/smartphone-case"
+                    data-product-price="29.99"
+                    aria-label="Add to wishlist"
+                    title="Add to wishlist">
+                <svg class="wishlist-heart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="heart-outline" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="#e91e63" stroke-width="1.5"/>
+                    <path class="heart-filled" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="#c2185b" style="opacity: 0;"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Wishlist Page Test Section -->
+    <div style="margin-top: 40px; padding-top: 40px; border-top: 2px solid #eee;">
+        <h2>Wishlist Page Preview</h2>
+        <div class="wishlist-page">
+            <div class="wishlist-header">
+                <h1>My Wishlist</h1>
+                <div class="wishlist-actions">
+                    <button class="clear-wishlist-btn" style="display: none;">Clear All</button>
+                    <span class="wishlist-total-items">0 items</span>
+                </div>
+            </div>
+            
+            <div class="wishlist-content">
+                <div class="wishlist-items-grid">
+                    <!-- Wishlist items will be populated by JavaScript -->
+                </div>
+                
+                <div class="wishlist-empty-state" style="display: none;">
+                    <div class="empty-state-content">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="#ddd" stroke-width="1.5"/>
+                        </svg>
+                        <h2>Your wishlist is empty</h2>
+                        <p>Discover products you love and add them to your wishlist</p>
+                        <a href="/" class="continue-shopping-btn">Start Shopping</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include wishlist CSS and JS -->
+    <link rel="stylesheet" href="extensions/wishlist-extension/assets/wishlist.css">
+    <script src="extensions/wishlist-extension/assets/wishlist.js"></script>
+</body>
+</html>
